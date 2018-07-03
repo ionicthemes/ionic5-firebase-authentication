@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar hideBackButton="true">
+    <ion-title>User</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-card>
+    <img [src]="user.image"/>
+    <ion-card-content>
+      <ion-card-title>
+        {{user.name}}
+      </ion-card-title>
+      <p>
+        This is an example app of authentication using Firebase in an Ionic 3 app.
+      </p>
+    </ion-card-content>
+    <button ion-button block type="button" (click)='logout()'>Logout</button>
+  </ion-card>
+</ion-content>

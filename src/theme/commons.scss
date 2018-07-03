@@ -1,0 +1,26 @@
+@mixin call-to-action-button-styles($background, $color){
+	border-radius: 6px;
+	color: $color;
+	background-color: $background;
+	font-size: 1.6rem;
+	font-weight: 500;
+}
+
+@mixin header-styles($background, $color){
+	.toolbar-background
+	{
+		border: none !important;
+		background-color: $background;
+	}
+
+	.toolbar-title,
+	.back-button,
+	.bar-button
+	{
+		color: $color;
+	}
+}
+
+ion-header {
+	@include header-styles(color($colors, header, base), color($colors, header, contrast));
+}

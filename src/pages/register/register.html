@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Register</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="form-content">
+  <form class="form" [formGroup]="registerForm" (ngSubmit)="tryRegister(registerForm.value)">
+
+    <ion-item>
+      <ion-label floating>Email</ion-label>
+      <ion-input type="text" formControlName="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input type="password" formControlName="password" class="form-controll"></ion-input>
+    </ion-item>
+
+    <button ion-button block class="submit-button" type="submit">Register</button>
+    <label class="error-message">{{errorMessage}}</label>
+    <label class="success-message">{{successMessage}}</label>
+    <br>
+    <div>
+      <p>Already have an account? <a (click)="goLoginPage()">Try to Log in</a></p>
+    </div>
+    <br>
+  </form>
+  <button ion-button block type="submit" class="facebook-button" (click)="tryFacebookLogin()">Register with Facebook</button>
+  <button ion-button block type="submit" class="twitter-button" (click)="tryTwitterLogin()">Register with Twitter</button>
+  <button ion-button block type="submit" class="google-button"  (click)="tryGoogleLogin()">Register with Google</button>
+</ion-content>

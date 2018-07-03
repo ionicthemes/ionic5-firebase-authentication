@@ -1,0 +1,5 @@
+page-user {
+  ion-header {
+    @include header-styles(color($colors, header, base), color($colors, header, contrast));
+  }
+}

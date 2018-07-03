@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="form-content">
+  <form class="form" [formGroup]="loginForm" (ngSubmit)="tryLogin(loginForm.value)">
+
+    <ion-item>
+      <ion-label floating>Email</ion-label>
+      <ion-input type="text" formControlName="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input type="password" formControlName="password" class="form-controll"></ion-input>
+    </ion-item>
+
+    <button ion-button full class="submit-button" type="submit">
+      Login
+    </button>
+    <label class="error-message">{{errorMessage}}</label>
+
+    <br>
+    <div>
+      <p>No account yet? <a (click)="goRegisterPage()">Create an account</a></p>
+    </div>
+    <br>
+
+  </form>
+  <button ion-button full type="submit" class="facebook-button" (click)="tryFacebookLogin()">Facebook Login</button>
+  <button ion-button full type="submit" class="twitter-button" (click)="tryTwitterLogin()">Twitter Login</button>
+  <button ion-button full type="submit" class="google-button"  (click)="tryGoogleLogin()">Google Login</button>
+</ion-content>

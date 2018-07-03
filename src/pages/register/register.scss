@@ -1,0 +1,39 @@
+page-register {
+  ion-header {
+    @include header-styles(color($colors, header, base), color($colors, header, contrast));
+  }
+  
+  .error-message
+  {
+   color: red;
+  }
+
+  .success-message{
+    color: green;
+  }
+
+  .submit-button
+  {
+    margin: 0px;
+    margin-top: 20px;
+    @include call-to-action-button-styles(color($colors, button, base), color($colors, button, contrast));
+  }
+
+  .twitter-button{
+    margin: 0px;
+    margin-top: 20px;
+    @include call-to-action-button-styles(color($colors, twitter, base), color($colors, twitter, contrast));
+  }
+  .facebook-button
+	{
+		margin: 0px;
+		@include call-to-action-button-styles(color($colors, facebook, base), color($colors, facebook, contrast));
+	}
+
+	.google-button
+	{
+		margin: 0px;
+		margin-top: 20px;
+		@include call-to-action-button-styles(color($colors, google, base), color($colors, google, contrast));
+	}
+}
