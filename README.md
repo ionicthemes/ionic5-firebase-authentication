@@ -4,8 +4,8 @@ In this ionic tutorial we will learn how to configure a firebase application to 
 
 This repo is a simple ionic 3 app example with the goal of helping you integration Firebase Authentication to your Ionic app.
 
-![demo](https://s3-us-west-2.amazonaws.com/ionicthemes/tutorials/screenshots/add-firebase-authentication-to-your-ionic-app/firebase-auth-login.png)
-![demo](https://s3-us-west-2.amazonaws.com/ionicthemes/tutorials/screenshots/add-firebase-authentication-to-your-ionic-app/firebase-auth-register.png)
+![demo](https://s3-us-west-2.amazonaws.com/ionicthemes/tutorials/screenshots/firebase-authentication-in-ionic-framework-apps/firebase-auth-login.png)
+![demo](https://s3-us-west-2.amazonaws.com/ionicthemes/tutorials/screenshots/firebase-authentication-in-ionic-framework-apps/firebase-auth-register.png)
 
 
 Read the complete Ionic Firebase Authentication Tutorial in https://ionicthemes.com/tutorials
