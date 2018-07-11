@@ -62,7 +62,7 @@ export class AuthService {
            const googleCredential = firebase.auth.GoogleAuthProvider.credential(response.idToken);
            firebase.auth().signInWithCredential(googleCredential)
            .then((user) => {
-             resolve()
+             resolve();
            });
          },(err) => {
            reject(err);
@@ -95,7 +95,6 @@ export class AuthService {
         .signInWithPopup(new firebase.auth.FacebookAuthProvider())
         .then(result => {
           //Default facebook img is too small and we need a bigger image
-          debugger;
           var bigImgUrl = "https://graph.facebook.com/" + result.additionalUserInfo.profile + "/picture?height=500";
           // update profile to save the big fb profile img.
           firebase.auth().currentUser.updateProfile({
@@ -110,6 +109,7 @@ export class AuthService {
   doTwitterLogin(){
     return new Promise<FirebaseUserModel>((resolve, reject) => {
       // if we are in a mobile device we use the twitter native plugin
+
       if (this.platform.is('cordova')) {
         this.tw.login()
           .then((response) => {
@@ -120,7 +120,10 @@ export class AuthService {
               error => reject(error)
             );
           },
-          err => reject(err)
+          err => {
+            console.log(err);
+            reject(err);
+          }
         );
       }
       else {
