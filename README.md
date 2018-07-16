@@ -8,4 +8,4 @@ This repo is a simple ionic 3 app example with the goal of helping you integrati
 ![demo](https://s3-us-west-2.amazonaws.com/ionicthemes/tutorials/screenshots/firebase-authentication-in-ionic-framework-apps/firebase-auth-register.png)
 
 
-Read the complete Ionic Firebase Authentication Tutorial in https://ionicthemes.com/tutorials
+Read the complete Ionic Firebase Authentication Tutorial in https://ionicthemes.com/tutorials/about/firebase-authentication-in-ionic-framework-apps
