@@ -73,7 +73,9 @@ export class AuthService {
          .signInWithPopup(new firebase.auth.GoogleAuthProvider())
          .then((user) => {
             resolve()
-         })
+         },(err) => {
+          reject(err);
+        })
        }
      })
    }
@@ -100,7 +102,12 @@ export class AuthService {
           firebase.auth().currentUser.updateProfile({
             displayName: result.user.displayName,
             photoURL: bigImgUrl
-          }).then(res => resolve());
+          }).then(res => resolve()
+          ,(err) => {
+            reject(err);
+          });
+        },(err) => {
+          reject(err);
         })
       }
     })
@@ -137,7 +144,11 @@ export class AuthService {
           firebase.auth().currentUser.updateProfile({
             displayName: result.user.displayName,
             photoURL: bigImgUrl
-          }).then(res => resolve());
+          }).then(res => resolve(),(err) => {
+            reject(err);
+          });
+        },(err) => {
+          reject(err);
         })
       }
     })
