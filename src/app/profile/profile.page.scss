@@ -1,0 +1,22 @@
+.profile-content {
+  --padding-bottom: 16px;
+  --padding-end: 16px;
+  --padding-start: 16px;
+  --padding-top: 16px;
+
+  .user-image {
+    border-radius: 4%;
+  }
+
+  .user-details-wrapper {
+    justify-content: center;
+
+    .user-image-wrapper {
+      text-align: center;
+    }
+
+    .user-info-wrapper {
+      text-align: center;
+    }
+  }
+}

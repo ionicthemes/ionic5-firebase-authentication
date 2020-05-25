@@ -1,0 +1,60 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="sign-up-content">
+  <h2 class="auth-title">
+    Sign Up with Firebase
+  </h2>
+  <form [formGroup]="signUpForm" (ngSubmit)="signUpWithEmail()">
+    <ion-list class="inputs-list" lines="full">
+      <ion-item class="input-item">
+        <ion-input type="email" placeholder="Email" formControlName="email" clearInput autocapitalize="off" inputmode="email"></ion-input>
+      </ion-item>
+      <div class="error-container">
+        <ng-container *ngFor="let validation of validation_messages.email">
+          <div class="error-message" *ngIf="signUpForm.get('email').hasError(validation.type) && (signUpForm.get('email').dirty || signUpForm.get('email').touched)">
+            <ion-icon name="information-circle-outline"></ion-icon>
+            <span>{{ validation.message }}</span>
+          </div>
+        </ng-container>
+      </div>
+
+      <ion-item class="input-item">
+        <ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+      </ion-item>
+      <div class="error-container">
+        <ng-container *ngFor="let validation of validation_messages.password">
+          <div class="error-message" *ngIf="signUpForm.get('password').hasError(validation.type) && (signUpForm.get('password').dirty || signUpForm.get('password').touched)">
+            <ion-icon name="information-circle-outline"></ion-icon>
+            <span>{{ validation.message }}</span>
+          </div>
+        </ng-container>
+      </div>
+    </ion-list>
+
+    <ion-button class="sign-up-btn" type="submit" expand="block" [disabled]="!signUpForm.valid">Sign Up</ion-button>
+    <div class="error-container" *ngIf="submitError">
+      <div class="error-message">
+        <ion-icon name="information-circle-outline"></ion-icon>
+        <span>{{ submitError }}</span>
+      </div>
+    </div>
+    <ion-row class="sign-in-btn-wrapper">
+      <ion-button class="sign-in-btn" fill="clear" [routerLink]="['/sign-in']">
+        Already have an account?
+      </ion-button>
+    </ion-row>
+  </form>
+
+  <div class="social-auth-options">
+    <p class="options-divider">Or</p>
+    <ion-button class="social-auth-btn" color="primary" expand="block" (click)="facebookSignUp()">Facebook Sign Up</ion-button>
+    <ion-button class="social-auth-btn google-auth-btn" color="danger" expand="block" (click)="googleSignUp()">Google Sign Up</ion-button>
+    <ion-button class="social-auth-btn twitter-auth-btn" color="secondary" expand="block" (click)="twitterSignUp()">Twitter Sign Up</ion-button>
+  </div>
+</ion-content>

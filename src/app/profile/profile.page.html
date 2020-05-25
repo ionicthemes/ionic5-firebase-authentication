@@ -1,0 +1,42 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="sign-in"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="profile-content">
+  <ion-row class="user-details-wrapper">
+    <ion-col size="6" class="user-image-wrapper">
+      <img class="user-image" [src]="user.image">
+    </ion-col>
+    <ion-col class="user-info-wrapper" size="12">
+      <h3>{{user.name}}</h3>
+      <p>{{user.description}}</p>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="12">
+      <h4>Mobile</h4>
+      <p>
+        {{user.phoneNumber}}
+      </p>
+    </ion-col>
+    <ion-col size="12">
+      <h4>Email</h4>
+      <p>
+        {{user.email}}
+      </p>
+    </ion-col>
+    <ion-col size="12">
+      <h4>Auth Provider</h4>
+      <p>
+        {{user.provider}}
+      </p>
+    </ion-col>
+    <ion-col size="12">
+      <ion-button expand="block" fill="outline" color="primary" (click)="signOut()">Sign out</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>

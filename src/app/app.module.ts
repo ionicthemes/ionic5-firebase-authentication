@@ -1,56 +1,34 @@
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ErrorHandler, NgModule } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-import { SplashScreen } from '@ionic-native/splash-screen';
-import { StatusBar } from '@ionic-native/status-bar';
+import { RouteReuseStrategy } from '@angular/router';
 
-import { MyApp } from './app.component';
-import { LoginPage } from '../pages/login/login';
-import { RegisterPage } from '../pages/register/register';
-import { UserPage} from '../pages/user/user';
+import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
+import { SplashScreen } from '@ionic-native/splash-screen/ngx';
+import { StatusBar } from '@ionic-native/status-bar/ngx';
 
+import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
 
-import { AuthService } from '../pages/core/auth.service';
-import { UserService } from '../pages/core/user.service';
-
-import { AngularFireModule } from 'angularfire2';
-import { AngularFireAuthModule } from 'angularfire2/auth';
-import { environment } from '../environment/environment';
-
-import { Facebook } from '@ionic-native/facebook';
-import { GooglePlus } from '@ionic-native/google-plus';
-import { TwitterConnect } from '@ionic-native/twitter-connect';
-
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { environment } from '../environments/environment';
+import { FirebaseAuthService } from './firebase-auth.service';
 
 @NgModule({
-  declarations: [
-    MyApp,
-    LoginPage,
-    RegisterPage,
-    UserPage
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(),
+    AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAuthModule,
-  ],
-  bootstrap: [IonicApp],
-  entryComponents: [
-    MyApp,
-    LoginPage,
-    RegisterPage,
-    UserPage
+    AngularFireAuthModule
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    Facebook,
-    GooglePlus,
-    AuthService,
-    TwitterConnect,
-    UserService,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
-  ]
+    FirebaseAuthService,
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+  ],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}
