@@ -8,6 +8,6 @@ export class ProfilePageResolver implements Resolve<any> {
   constructor(private firebaseAuthService: FirebaseAuthService) {}
 
   resolve() {
-    return this.firebaseAuthService.getProfileData();
+    return this.firebaseAuthService.getProfileDataSource();
   }
 }

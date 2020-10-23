@@ -21,7 +21,7 @@ export class ProfilePage implements OnInit {
     this.route.data
     .subscribe((result) => {
       this.user = result['data'];
-    })
+    }, (err) => {})
   }
 
   signOut() {
@@ -32,5 +32,4 @@ export class ProfilePage implements OnInit {
       console.log('signout error', error);
     });
   }
-
 }
