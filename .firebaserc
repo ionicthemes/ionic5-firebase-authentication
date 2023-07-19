@@ -1,4 +1,8 @@
 {
+  "projects": {
+    "demo": "ionic5-firebase-authentication",
+    "KNJCO": "knjco-876dc"
+  },
   "targets": {
     "ionic5-firebase-authentication": {
       "hosting": {
@@ -8,7 +12,5 @@
       }
     }
   },
-  "projects": {
-    "demo": "ionic5-firebase-authentication"
-  }
+  "etags": {}
 }
