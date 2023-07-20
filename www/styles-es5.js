@@ -11,11 +11,11 @@
     /***/
     function _(module, exports, __webpack_require__) {
       __webpack_require__(
-      /*! /Users/nathanyaquinto/Desktop/openpitch/ionic5-firebase-authentication/src/theme/variables.scss */
+      /*! /Users/justin/Repos/KNJCO/ionic5-firebase-authentication/src/theme/variables.scss */
       "fFqt");
 
       module.exports = __webpack_require__(
-      /*! /Users/nathanyaquinto/Desktop/openpitch/ionic5-firebase-authentication/src/global.scss */
+      /*! /Users/justin/Repos/KNJCO/ionic5-firebase-authentication/src/global.scss */
       "8oQk");
       /***/
     },
