@@ -18,7 +18,7 @@
 
       var _firebase_auth__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @firebase/auth */
-      "LOEa");
+      "PZDf");
       /* harmony import */
 
 
@@ -29,15 +29,15 @@
     },
 
     /***/
-    "LOEa":
-    /*!**************************************************!*\
-      !*** ./node_modules/@firebase/auth/dist/auth.js ***!
-      \**************************************************/
+    "PZDf":
+    /*!************************************************************************!*\
+      !*** ./node_modules/firebase/node_modules/@firebase/auth/dist/auth.js ***!
+      \************************************************************************/
 
     /*! no static exports found */
 
     /***/
-    function LOEa(module, exports, __webpack_require__) {
+    function PZDf(module, exports, __webpack_require__) {
       (function () {
         var firebase = __webpack_require__(
         /*! @firebase/app */
