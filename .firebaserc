@@ -1,13 +1,21 @@
 {
   "projects": {
     "demo": "ionic5-firebase-authentication",
-    "KNJCO": "knjco-876dc"
+    "KNJCO": "knjco-876dc",
+    "default": "knjco-876dc"
   },
   "targets": {
     "ionic5-firebase-authentication": {
       "hosting": {
         "app": [
           "ionic5-firebase-authentication"
+        ]
+      }
+    },
+    "knjco-876dc": {
+      "hosting": {
+        "app": [
+          "."
         ]
       }
     }
